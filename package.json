@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "nodemon index.js"
   },
+  "type":"module",
   "author": "Carlos Alejandro Galindo Islas",
   "license": "ISC",
   "dependencies": {
