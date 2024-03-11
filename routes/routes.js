@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/us', (req, res) => {
-    res.send('Us');
+    res.render('us');
 });
 
 router.get('/contact', (req, res) => {
