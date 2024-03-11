@@ -3,18 +3,17 @@ import express from "express";
 const router =  express.Router();
 
 router.get('/', (req, res) => {
-    res.send('Hello world');
+    res.render('index');
     // res.render()
     // res.json
     // res.status()
 });
 
 router.get('/us', (req, res) => {
-    res.render('us');
-});
-
-router.get('/contact', (req, res) => {
-    res.send('Contact');
+    const travels =  'Travel to Germany'
+    res.render('us', {
+        travels
+    });
 });
 
 export default router;
