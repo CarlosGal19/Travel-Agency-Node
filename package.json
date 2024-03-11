@@ -6,11 +6,12 @@
   "scripts": {
     "dev": "nodemon index.js"
   },
-  "type":"module",
+  "type": "module",
   "author": "Carlos Alejandro Galindo Islas",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.3"
+    "express": "^4.18.3",
+    "pug": "^3.0.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
