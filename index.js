@@ -27,6 +27,9 @@ app.use((req, res, next) => {
     return next();
 });
 
+// Add body parser
+app.use(express.urlencoded({ extended: true }));
+
 // Define public folder
 app.use(express.static('public'));
 
