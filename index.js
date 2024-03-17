@@ -1,7 +1,18 @@
 import router from './routes/routes.js'
 import express from 'express';
+import db from './config/db.js';
 
 const app = express();
+
+// Connect db
+(async () => {
+    try {
+        await db.authenticate();
+        console.log('Connection has been established successfully.');
+    } catch (error) {
+        console.log('Unable to connect to the database: ', error);
+    }
+})();
 
 const port = process.env.PORT || 3000;
 
