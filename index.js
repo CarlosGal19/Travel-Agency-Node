@@ -11,6 +11,9 @@ app.use('/', router);
 // Enable pug
 app.set('view engine', 'pug');
 
+// Define public folder
+app.use(express.static('public'));
+
 app.listen(port, () => {
     console.log(`The server is running on port ${port}`);
 });
