@@ -10,7 +10,6 @@
   "author": "Carlos Alejandro Galindo Islas",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.2",
     "express": "^4.18.3",
     "mysql2": "^3.9.2",
     "pug": "^3.0.2",
