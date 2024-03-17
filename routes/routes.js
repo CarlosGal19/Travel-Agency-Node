@@ -1,5 +1,5 @@
 import express from "express";
-import { mainPage, usPage, travelsPage, testimonialsPage } from "../controllers/pagesController.js";
+import { mainPage, usPage, travelsPage, testimonialsPage, travelDetail } from "../controllers/pagesController.js";
 
 const router =  express.Router();
 
@@ -11,6 +11,8 @@ router.get('/', mainPage);
 router.get('/us', usPage);
 
 router.get('/travels', travelsPage);
+
+router.get('/travels/:slug', travelDetail);
 
 router.get('/testimonials', testimonialsPage);
 
