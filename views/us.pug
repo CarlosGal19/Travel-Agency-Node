@@ -3,5 +3,27 @@ extends ./layout/index
 block content
     main.container.mt-5
         .row
-            h1= title
-    img(src='./img/cupon.jpg')
+            .col-md-5
+                img(src='./img/nosotros.jpg', class='img-fluid', alt='Image about us')
+            .col-md-7
+                h1= title
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget porta lacus. Donec in fringilla turpis. Sed vehicula mattis magna. Maecenas fermentum ligula venenatis, posuere sem at, dictum risus. Aenean eu sapien at elit volutpat lacinia. Phasellus ut eros sed justo rutrum venenatis. Ut vitae dui rutrum leo malesuada ullamcorper ut sed ipsum. Sed dignissim metus vel consequat luctus.
+
+                p Integer mattis urna augue, nec malesuada tortor interdum eget. In hendrerit quam et porta pharetra. Donec aliquet ornare purus, vel semper dolor rutrum ut. Nulla at euismod eros. Aenean iaculis ex velit, id suscipit enim lacinia vel.
+
+                p Fusce nisl dui, tincidunt sit amet porttitor sit amet, fringilla ac est. Aliquam ac sollicitudin ipsum, nec tincidunt purus. Sed fringilla aliquam odio, nec eleifend nisi posuere rutrum.
+    .listado-iconos
+        .container.mt-5.py-4.text-center
+            .row
+                .col-md-4
+                    img(src='./img/icono_seguridad.svg' class='img-fluid mb-4', alt='Safety icon')
+                    h2.mb-4 Safety
+                    p Fusce nisl dui, tincidunt sit amet porttitor sit amet, fringilla ac est. Aliquam ac sollicitudin ipsum, nec tincidunt purus. Sed fringilla aliquam odio, nec eleifend nisi posuere rutrum.
+                .col-md-4
+                    img(src='./img/icono_destinos.svg' class='img-fluid mb-4', alt='Destinations icon')
+                    h2.mb-4 Best Destinations
+                    p Fusce nisl dui, tincidunt sit amet porttitor sit amet, fringilla ac est. Aliquam ac sollicitudin ipsum, nec tincidunt purus. Sed fringilla aliquam odio, nec eleifend nisi posuere rutrum.
+                .col-md-4
+                    img(src='./img/icono_precios.svg' class='img-fluid mb-4', alt='Prices icon')
+                    h2.mb-4 Best Prices
+                    p Fusce nisl dui, tincidunt sit amet porttitor sit amet, fringilla ac est. Aliquam ac sollicitudin ipsum, nec tincidunt purus. Sed fringilla aliquam odio, nec eleifend nisi posuere rutrum.
