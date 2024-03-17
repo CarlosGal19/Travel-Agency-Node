@@ -3,16 +3,29 @@ import express from "express";
 const router =  express.Router();
 
 router.get('/', (req, res) => {
-    res.render('home');
+    res.render('home', {
+        title: 'Home',
+    });
     // res.render()
     // res.json
     // res.status()
 });
 
 router.get('/us', (req, res) => {
-    const travels =  'Travel to Germany'
     res.render('us', {
-        travels
+        title: 'About Us'
+    });
+});
+
+router.get('/travels', (req, res) => {
+    res.render('travels', {
+        title: 'Travels'
+    });
+});
+
+router.get('/testimonials', (req, res) => {
+    res.render('testimonials', {
+        title: 'Testimonials'
     });
 });
 

@@ -11,9 +11,8 @@ app.set('view engine', 'pug');
 // Get current year with middleware
 app.use((req, res, next) => {
     // Locals are local variable from express that are availables in the views
-    const year = new Date();
-    console.log(year.getFullYear());
-    res.locals.currentYear = year.getFullYear();
+    res.locals.currentYear = new Date().getFullYear();
+    res.locals.siteNames = 'Travel Agency';
     return next();
 });
 
