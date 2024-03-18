@@ -15,12 +15,14 @@ const saveTestimonial = async (req, res) => {
         errors.push({ message: 'Add your message' });
     }
     if (errors.length > 0) {
+        const testimonials = await Testimonial.findAll();
         res.render('testimonials', {
             title: 'Testimonials',
             errors,
             name,
             email,
-            message
+            message,
+            testimonials
         });
     }else{
         try {

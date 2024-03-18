@@ -3,8 +3,17 @@ extends ./layout/index
 block content
     main.container.mt-5
         h1.text-center.mt-5 #{title}
-
-        p= JSON.stringify(testimonials)
+        blockquote.text-center Read about our clients and their experiences with our services
+        .row.testimoniales
+            each testimonial in testimonials
+                .col-md-6.col-lg-4.mb-4
+                    .card
+                        .card-body
+                            blockquote.blockquote
+                            p.mb-0
+                                | #{testimonial.message}
+                            footer.blockquote-footer
+                                | #{testimonial.name}
 
         .row
             .col-md-12
