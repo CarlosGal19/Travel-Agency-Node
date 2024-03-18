@@ -4,6 +4,7 @@ import { Testimonial } from '../models/Testimonials.js';
 const mainPage = (req, res) => {
     res.render('home', {
         title: 'Home',
+        classBody: 'home'
     });
 }
 

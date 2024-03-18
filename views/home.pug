@@ -1,6 +1,16 @@
 extends ./layout/index
 
+block slider
+    .slider
+        h1 Rio de Janeiro
+        em Adventure
+
 block content
     main.container.mt-5
-        .row
-            h1= title
+        h2.text-center.mb-5 About Us
+        .row.mb-5
+            .col-md-6
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis quis ex quis efficitur. Nunc nisl ligula, finibus eu mattis sed, facilisis et risus. Nulla sed lorem laoreet, malesuada massa ac, mattis ipsum. Phasellus at est sit amet urna tempor tincidunt et eu ligula. Sed vitae elementum dui. Vivamus nec lobortis urna. Nunc sodales aliquam dui, ac tempus nibh placerat sodales. Quisque id faucibus ligula. Fusce sollicitudin arcu erat, non mattis nunc aliquet eu.
+                p Vestibulum pulvinar eu nunc eu pulvinar. Suspendisse ornare, libero ut pulvinar hendrerit, mauris velit laoreet justo, nec placerat dui urna ac nibh. Praesent id sapien malesuada, pulvinar erat sed, iaculis ipsum. Nam sed dolor lorem. Maecenas viverra libero id condimentum ultrices. Praesent laoreet, ante quis efficitur varius, ante tortor vestibulum ante, sit amet pulvinar lectus justo a velit.
+            .col-md-6
+                img(src="/img/inicio_nosotros.jpg", alt="About Us", class="img-fluid")
