@@ -3,6 +3,9 @@ extends ./layout/index
 block content
     main.container.mt-5
         h1.text-center.mt-5 #{title}
+
+        p= JSON.stringify(testimonials)
+
         .row
             .col-md-12
                 h2.d-block.w-100.text-center Add a testimonial
