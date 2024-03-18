@@ -12,6 +12,15 @@ const saveTestimonial = (req, res) => {
     if (!message) {
         errors.push({ message: 'Add your message' });
     }
+    if (errors.length > 0) {
+        res.render('testimonials', {
+            title: 'Testimonials',
+            errors,
+            name,
+            email,
+            message
+        });
+    }
 }
 
 export{

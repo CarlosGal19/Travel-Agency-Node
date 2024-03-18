@@ -4,17 +4,21 @@ block content
     main.container.mt-5
         h1.text-center.mt-5 #{title}
         .row
-            h2.d-block.w-100.text-center Add a testimonial
+            .col-md-12
+                h2.d-block.w-100.text-center Add a testimonial
+                if(errors)
+                    each error in errors
+                        .alert.alert-danger.col.text-center= error.message
             .row.justify-content-center.col
                 .col-md-8
                     form(acion="/testimonials" method="POST")
                         .form-group
                             label(for="name") Name
-                            input#name(type="text" name="name" required placeholder="Your name" class="form-control")
+                            input#name(type="text" name="name" placeholder="Your name" class="form-control" value= name)
                         .form-group
                             label(for="email") Email
-                            input#email(type="email" name="email" required placeholder="Your email" class="form-control")
+                            input#email(type="email" name="email" placeholder="Your email" class="form-control" value= email)
                         .form-group
                             label(for="message") Message
-                            textarea#message(name="message", rows="3" class="form-control" required placeholder="Your message")
+                            textarea#message(name="message", rows="3" class="form-control" placeholder="Your message")= message
                         input.btn.btn-success.btn-block(type="submit" value="Add testimonial")
