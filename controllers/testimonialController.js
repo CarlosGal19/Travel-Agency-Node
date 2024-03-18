@@ -1,4 +1,6 @@
-const saveTestimonial = (req, res) => {
+import { Testimonial } from '../models/Testimonials.js';
+
+const saveTestimonial = async (req, res) => {
     const { name, email, message } = req.body;
     let errors = [];
     if (!name) {
@@ -20,6 +22,21 @@ const saveTestimonial = (req, res) => {
             email,
             message
         });
+    }else{
+        try {
+            await Testimonial.create({
+                name,
+                email,
+                message
+            });
+            res.redirect('/testimonials');
+        } catch (error) {
+            errors.push(error.message);
+            res.render('testimonials', {
+                title: 'Testimonials',
+                errors
+            });
+        }
     }
 }
 
